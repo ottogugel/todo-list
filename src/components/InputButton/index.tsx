@@ -4,7 +4,7 @@ import { AntDesign } from '@expo/vector-icons'
 
 export function InputButton() {
   return (
-    <View className="flex-row items-center justify-center">
+    <View className="flex-row items-center justify-center gap-2">
       <TextInput
         className="flex p-4 bg-white"
         placeholder="Adicione uma nova tarefa"
