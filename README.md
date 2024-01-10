@@ -1,6 +1,8 @@
-<h1 align="center">
-	Todo List
-</h1>
+<br /><br />
+<h4 align="center">
+<img src="./src/assets/Logo.svg" align="center"/>
+</h4>
+<br /><br />
 
 ## 💭 O que é e qual a ideia do projeto?
 

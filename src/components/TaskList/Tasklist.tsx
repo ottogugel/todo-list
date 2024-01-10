@@ -6,7 +6,7 @@ interface TaskProps {
   onRemove: () => void;
 }
 
-export function Task({name, onRemove }: TaskProps) {
+export function Tasklist({name, onRemove }: TaskProps) {
   return (
     <View className="flex-row shadow border bg-neutral-800 border-zinc-800 rounded-lg mb-2 items-center">
       <View className="ml-5">

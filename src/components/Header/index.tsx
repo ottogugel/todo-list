@@ -5,8 +5,10 @@ import Logo from '../../assets/Logo.svg'
 export function Header() {
 
   return (
-    <View className="bg-dark justify-center items-center h-48">
-      <Logo />
+    <View className="bg-dark justify-center items-center">
+      <View className="pt-12 h-32">
+        <Logo />
+      </View>
     </View>
   );
 }

@@ -7,6 +7,8 @@ module.exports = {
         dark: "#0D0D0D",
         bluedark: "#1E6F9F",
         gray550: "#191919",
+        bluelight: "#4EA8DE",
+        purple550: "#8284FA",
       },
       fontFamily: {
         regular: "Inter_400Regular",

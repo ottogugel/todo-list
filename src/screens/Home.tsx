@@ -2,7 +2,7 @@ import { Alert, FlatList, TextInput, TouchableOpacity, View, Text } from "react-
 import Header from "../components/Header";
 import colors from 'tailwindcss/colors'
 import { AntDesign } from '@expo/vector-icons'
-import { Task } from "../components/Task/Task";
+import { Tasklist }  from "../components/TaskList/Tasklist";
 import React, { useState } from 'react';
 
 export function Home() {
@@ -43,7 +43,7 @@ function handleTaskRemove(name: string) {
 }
 
   return (
-    <View className="flex-1 bg-gray550">
+    <View className="flex-1 bg-gray550 pb-12">
       <Header />
 
       <View className="flex-row justify-start items-center gap-2 ml-0">
@@ -65,12 +65,28 @@ function handleTaskRemove(name: string) {
         </View>
       </View>
 
-      <View className="flex p-4">
+      {/* Task Item */}
+      <View className="flex-row justify-between pb-5 ml-3 pt-7">
+        <View className="flex-row items-center">
+          <Text className="font-bold text-bluelight">Created</Text>
+          <Text className="w-10 ml-2 py-3 border rounded-xl bg-gray-400 text-gray-100 text-center">
+            0{/* items?.length || 0*/}
+          </Text>
+        </View>
+        <View className="flex-row items-center mr-3">
+          <Text className="font-bold text-purple550">Completed</Text>
+          <Text className="w-10 ml-2 py-3 border rounded-xl bg-gray-400 text-gray-100 text-center">
+            0{/*String(finishedItems)*/}
+          </Text>
+        </View>
+      </View>
+      {/* Task List */}
+      <View className="p-2">
         <FlatList
           data={tasks}
           keyExtractor={(item) => item}
           renderItem={({ item }) => (
-            <Task
+            <Tasklist
               key={item}
               name={item}
               onRemove={() => handleTaskRemove(item)}
