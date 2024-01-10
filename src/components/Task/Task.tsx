@@ -1,40 +1,27 @@
-import { TouchableOpacity, View } from "react-native";
-import BouncyCheckbox from "react-native-bouncy-checkbox";
-import { Feather } from "@expo/vector-icons";
+import { Text, TouchableOpacity, View } from "react-native";
+import { Feather, Entypo } from "@expo/vector-icons";
 
 interface TaskProps {
-  description: string;
-  finished: boolean;
-  onFinish: (description: string) => void;
-  onRemove: (description: string) => void;
+  name: string;
+  onRemove: () => void;
 }
 
-export function Task({ description, finished, onFinish, onRemove }: TaskProps) {
+export function Task({name, onRemove }: TaskProps) {
   return (
-    <View >
-      <View>
-        <BouncyCheckbox
-          size={20}
-          fillColor="#5E60CE"
-          unfillColor="transparent"
-          innerIconStyle={{
-            borderColor: `${finished ? "#5E60CE" : "#4EA8DE"}`,
-          }}
-          text={description}
-          textStyle={{
-            color: `${finished ? "#808080" : "#F2F2F2"}`,
-          }}
-          isChecked={finished}
-          onPress={() => {
-            onFinish(description);
-          }}
-        />
+    <View className="flex-row shadow border bg-neutral-800 border-zinc-800 rounded-lg mb-2 items-center">
+      <View className="ml-5">
+        <TouchableOpacity>
+          <Entypo name="circle" size={20} color="#4EA8DE" />
+        </TouchableOpacity>
       </View>
-      <TouchableOpacity
-        onPress={() => onRemove(description)}
-      >
-        <Feather name="trash-2" size={20} color="#808080" />
-      </TouchableOpacity>
+      <View className="flex-1 items-center">
+        <Text className="text-white text-sm ml-4">{name}</Text>
+      </View>
+      <View className="w-10">
+        <TouchableOpacity onPress={onRemove}>
+          <Feather name="trash-2" size={20} color="#808080" />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
