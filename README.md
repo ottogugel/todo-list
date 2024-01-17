@@ -32,7 +32,7 @@ Esse é o quarto desafio da trilha de react native do ignite de 2022 da [Rockets
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/CaioVinicius7/todo-list-mobile.git
+$ git clone https://github.com/ottogugel/todo-list.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd todo-list-mobile

@@ -5,12 +5,12 @@ import { AntDesign } from '@expo/vector-icons'
 import { Tasklist }  from "../components/TaskList/Tasklist";
 import React, { useState } from 'react';
 
-export function Home() {
-
-interface Task {
-  description: string;
-  finished: boolean;
+export interface Task {
+  task: string;
+  checked: boolean;
 }
+
+export function Home() {
 
 const [tasks, setTasks] = useState<string[]>([]);
 const [taskName, setTaskName] = useState("");
